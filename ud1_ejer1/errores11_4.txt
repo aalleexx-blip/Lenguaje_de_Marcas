@@ -1,0 +1,8 @@
+Errores de "11_4.html"
+Linea 2: Falta de ortografía, se escribe lang en vez de lang, además faltan comillas al "es"
+Linea 4: Title debe cerrarse.
+Linea 7: Falta cerrar la etiqueta de h1.
+linea 8: La etiqueta <b> debe cerrarse antes del parrafo.
+Linea 9: Falta cerrar el parrafo (</p>).
+Linea 11: Debe de carrarse la etiqueta <li>.
+Linea 12: Debe de carrarse la etiqueta <li>.
