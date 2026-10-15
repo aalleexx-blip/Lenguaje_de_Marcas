@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><strong>Formade alta de usuarios</strong></h1>
+    <table>
+        <form action="ud14_ej4.php" method="post">
+            <tr>
+                <td><label for="nombre">Nombre:</label></td>
+                <td><input type="text" name="nombre" id="nombre" required></td>
+            </tr>
+            <tr>
+                <td><label for="apellido">Apellido:</label></td>
+                <td><input type="text" name="apellido" id="apellido" required></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" name="email" id="email" required></td>
+            </tr>
+            <tr>
+                <td><label for="telefono">Teléfono:</label></td>
+                <td><input type="tel" name="telefono" id="telefono"></td>
+            </tr>
+            <tr>
+                <td><label for="sexo">Sexo:</label></td>
+                <td>
+                    <input type="radio" name="sexo" id="masculino" value="masculino">
+                    <label for="masculino">Masculino</label>
+                    <input type="radio" name="sexo" id="femenino" value="femenino">
+                    <label for="femenino">Femenino</label>
+                    <input type="radio" name="sexo" id="otro" value="otro">
+                    <label for="otro">Otro</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="Aficiones">Aficiones:</label></td>
+                <td>
+                    <input type="checkbox" name="aficiones[]" id="deporte" value="deporte">
+                    <label for="deporte">Deporte</label>
+                    <input type="checkbox" name="aficiones[]" id="lectura" value="lectura">
+                    <label for="lectura">Lectura</label>
+                    <input type="checkbox" name="aficiones[]" id="cine" value="cine">
+                    <label for="cine">Cine</label>
+                </td>
+                
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Enviar"></td>
+            </tr>
+
+            
+        </table>
+
+</body>
+</html>
