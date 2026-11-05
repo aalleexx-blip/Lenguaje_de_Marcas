@@ -1,0 +1,183 @@
+body {
+    background-color: #0d0b1e;
+    color: #e2e8f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Comportamiento 1: Menú lateral fixed de 200px */
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    background-color: #05040f;
+    box-sizing: border-box;
+    padding: 30px 20px;
+    z-index: 100;
+}
+
+.menu-lateral .logo {
+    color: #ff4f81;
+    font-weight: bold;
+    font-size: 1.1em;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+.menu-lateral ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-lateral li {
+    margin-bottom: 20px;
+}
+
+.menu-lateral a {
+    color: #a0aec0;
+    text-decoration: none;
+    font-size: 1.05em;
+    transition: color 0.2s;
+}
+
+.menu-lateral a:hover {
+    color: #ff4f81;
+}
+
+/* Margen izquierdo para que el main no quede tapado por el menú lateral */
+.contenido-principal {
+    margin-left: 200px;
+}
+
+/* Comportamiento 2: Portada con bloque de 300px y texto absolute abajo a la izquierda */
+header#inicio {
+    position: relative;
+    height: 300px;
+    background-color: #1f1b3c;
+}
+
+.portada {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+
+.portada h1 {
+    color: #38e1d0;
+    font-size: 2.5em;
+    margin: 0 0 10px 0;
+}
+
+.portada p {
+    margin: 0;
+    color: #cbd5e0;
+    font-size: 1.1em;
+}
+
+section {
+    padding: 40px 50px;
+    border-bottom: 1px solid #ff4f81;
+}
+
+/* Comportamiento 3: Títulos de sección sticky */
+section h2 {
+    position: sticky;
+    top: 0;
+    background-color: #0d0b1e;
+    color: #38e1d0;
+    margin: -40px -50px 30px -50px;
+    padding: 20px 50px;
+    z-index: 10;
+    font-size: 1.8em;
+}
+
+/* Comportamiento 4: Línea de tiempo con ::before */
+.horario {
+    position: relative;
+    list-style: none;
+    padding-left: 30px;
+    margin: 0;
+}
+
+.horario::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    left: 4px;
+    width: 2px;
+    background-color: #ff4f81;
+}
+
+.horario li {
+    position: relative;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+.horario li::before {
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    background-color: #38e1d0;
+    border-radius: 50%;
+}
+
+.horario strong {
+    color: #ff4f81;
+    margin-right: 15px;
+}
+
+/* Comportamiento 5: Artistas en píldoras */
+.cartel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.cartel span {
+    display: inline-block;
+    border: 1px solid #ff4f81;
+    padding: 10px 25px;
+    border-radius: 30px;
+    color: white;
+    background-color: transparent;
+}
+
+.cartel span.destacado {
+    background-color: #ff4f81;
+}
+
+/* Comportamiento 6: Preguntas (FAQ) con scroll de 170px */
+.faq {
+    height: 170px;
+    overflow-y: scroll;
+    border: 1px solid #2d3748;
+    background-color: #131026;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.faq p {
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #2d3748;
+    padding-bottom: 10px;
+}
+
+.faq strong {
+    color: #38e1d0;
+}
+
+footer {
+    text-align: left;
+    padding: 30px 50px;
+    color: #a0aec0;
+}
