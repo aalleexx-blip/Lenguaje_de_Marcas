@@ -1,0 +1,227 @@
+body {
+    background-color: #e9efe9;
+    font-family: Arial, sans-serif;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
+    width: 960px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #2f5d46;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    position: relative; /* Comportamiento 2: referencia para el sello absoluto */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2em;
+}
+
+header p {
+    margin: 10px 0 0 0;
+}
+
+/* Comportamiento 2: Sello Nueva temporada */
+.sello {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 84px;
+    height: 84px;
+    background-color: #f08a24;
+    color: white;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    line-height: 84px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+/* Comportamiento 1: Menú nav sticky */
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #2f5d46;
+    z-index: 1000;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #f08a24;
+}
+
+section {
+    padding: 20px 40px;
+}
+
+section h2 {
+    color: #2f5d46;
+    border-bottom: 2px solid #e9efe9;
+    padding-bottom: 5px;
+}
+
+/* Estilos de tarjetas de rutas */
+.tarjeta {
+    display: inline-block;
+    width: 270px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    vertical-align: top;
+    margin-right: 15px;
+    overflow: hidden; /* Comportamiento 3: recorta lo que sobresalga */
+    position: relative; /* Referencia para la etiqueta absoluta */
+    box-sizing: border-box;
+}
+
+.tarjeta:last-child {
+    margin-right: 0;
+}
+
+/* Comportamiento 4: Tarjeta central elevada y con sombra */
+.tarjeta.central {
+    position: relative;
+    top: -12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.foto-verde, .foto-azul, .foto-amarilla {
+    height: 140px;
+    width: 100%;
+    position: relative;
+}
+
+.foto-verde { background-color: #8fb996; }
+.foto-azul { background-color: #a7c5d9; }
+.foto-amarilla { background-color: #e5c07b; }
+
+/* Comportamiento 3: Etiqueta de nivel */
+.etiqueta {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f08a24;
+    color: white;
+    padding: 3px 8px;
+    font-size: 0.8em;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.tarjeta h3 {
+    margin: 15px 15px 5px 15px;
+    font-size: 1.2em;
+    color: #2f5d46;
+}
+
+.tarjeta p {
+    margin: 0 15px 15px 15px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Comportamiento 5: Galería polaroid */
+.galeria-contenedor {
+    position: relative;
+    height: 260px;
+    margin-top: 20px;
+}
+
+.polaroid {
+    position: absolute;
+    width: 280px;
+    height: 210px;
+    background: white;
+    border: 6px solid white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-sizing: border-box;
+    transition: z-index 0.3s;
+}
+
+.polaroid .pie {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(47, 93, 70, 0.8);
+    color: white;
+    margin: 0;
+    padding: 8px;
+    box-sizing: border-box;
+    font-size: 0.9em;
+}
+
+.polaroid.p1 { top: 10px; left: 40px; z-index: 1; }
+.polaroid.p2 { top: 40px; left: 240px; z-index: 3; } /* Central encima */
+.polaroid.p3 { top: 10px; left: 440px; z-index: 2; }
+
+.polaroid:hover {
+    z-index: 999; /* Pasa al frente al pasar el ratón */
+}
+
+/* Comportamiento 6: Opiniones con scroll */
+.caja-opiniones {
+    height: 170px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    background: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.caja-opiniones p {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2f5d46;
+    color: white;
+    margin-top: 40px;
+}
+
+/* Comportamiento 7: Botón Subir fixed */
+.btn-subir {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f08a24;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    z-index: 2000;
+}
