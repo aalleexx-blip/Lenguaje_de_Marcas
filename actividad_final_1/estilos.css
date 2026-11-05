@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,700");
+
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Agrupaciones Lógicas */
+header {
+    background-color: #eee;
+    padding: 20px;
+    position: relative;
+}
+.logo-izq { position: absolute; left: 30px; top: 20px; width: 100px; }
+.logo-der { position: absolute; right: 30px; top: 20px; width: 100px; }
+header h1 { color: darkred; margin: 0; font-size: 3em; }
+header h2 { color: darkgreen; margin: 5px 0 0 0; }
+
+nav {
+    background-color: #eee;
+    padding: 15px 0;
+    margin-bottom: 5px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 10px;
+    padding: 2px 0;
+}
+nav a:hover {
+    color: red;
+    border-top: 2px solid red;
+    border-bottom: 2px solid red;
+}
+
+section {
+    display: block;
+    width: 100%;
+    font-size: 0; /* Elimina el espacio fantasma entre inline-blocks */
+}
+
+/* Artículos en línea con display */
+article {
+    display: inline-block;
+    width: 33.33%;
+    vertical-align: top;
+    box-sizing: border-box;
+    padding: 20px;
+    border: 3px solid white;
+    font-size: 16px; /* Restaura el tamaño de fuente */
+    text-align: left;
+    min-height: 250px;
+}
+article img {
+    width: 70px;
+    float: left;
+    margin-right: 15px;
+}
+article h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.5em;
+}
+
+/* Pseudoclase nth-child para los colores de fondo */
+article:nth-child(1) { background-color: rgba(162, 179, 188, 0.5); }
+article:nth-child(2) { background-color: rgba(241, 151, 79, 0.5); }
+article:nth-child(3) { background-color: rgba(208, 61, 107, 0.5); }
+article:nth-child(4) { background-color: rgba(195, 23, 65, 0.5); }
+article:nth-child(5) { background-color: rgba(109, 104, 166, 0.5); }
+article:nth-child(6) { background-color: rgba(156, 154, 203, 0.5); }
+
+footer {
+    background-color: #eee;
+    padding: 20px 0;
+    margin-top: 5px;
+}
+.iconos-footer img {
+    width: 50px;
+    margin: 0 5px;
+}
+footer p {
+    margin: 20px 0 0 0;
+    color: #444;
+}
+
+/* Transiciones para que todas las imágenes crezcan */
+img {
+    transition: transform 0.3s ease;
+}
+img:hover {
+    transform: scale(1.15);
+}
